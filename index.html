@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -53,13 +53,14 @@
             overflow: hidden;
         }
 
-        /* Header */
+        /* Header - تصویر کامل لوگو */
+
         .header {
-            background: var(--navy);
-            color: #ffffff;
-            padding: 30px 20px 26px;
+            background: #ffffff;
+            padding: 0;
             text-align: center;
             position: relative;
+            overflow: hidden;
         }
 
         .header::after {
@@ -77,49 +78,39 @@
         }
 
         .logo-wrapper {
-            margin-bottom: 14px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            width: 100%;
+            margin: 0;
+            display: block;
         }
 
         .logo-img {
-            max-width: 220px;
-            max-height: 120px;
-            width: auto;
+            width: 100%;
             height: auto;
+            max-width: none;
+            max-height: none;
             display: block;
             object-fit: contain;
-            border-radius: 8px;
+            border-radius: 0;
         }
 
         .logo-fallback {
-            width: 78px;
-            height: 78px;
-            border: 2px solid var(--gold);
-            border-radius: 20px;
+            width: 100%;
+            height: 220px;
+            border: 0;
+            border-radius: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #fff;
+            color: #ffffff;
+            background: var(--navy);
             font-size: 25px;
             font-weight: 800;
             letter-spacing: 2px;
-            margin: 0 auto;
-        }
-
-        .header h1 {
-            font-size: 1.45rem;
-            font-weight: 800;
-            margin-bottom: 6px;
-        }
-
-        .header p {
-            font-size: 0.88rem;
-            color: #e5e7eb;
+            margin: 0;
         }
 
         /* Content */
+
         .content {
             padding: 22px 20px;
         }
@@ -132,6 +123,7 @@
         }
 
         /* Person */
+
         .person-card {
             background: #ffffff;
             border: 1px solid var(--border-color);
@@ -196,6 +188,7 @@
         }
 
         /* Buttons */
+
         .button-group {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -236,6 +229,7 @@
         }
 
         /* External actions */
+
         .actions-section {
             display: grid;
             gap: 10px;
@@ -264,6 +258,7 @@
         }
 
         /* Footer */
+
         .footer {
             text-align: center;
             padding: 15px;
@@ -296,10 +291,6 @@
             .button-group {
                 grid-template-columns: 1fr;
             }
-
-            .header h1 {
-                font-size: 1.3rem;
-            }
         }
     </style>
 </head>
@@ -308,12 +299,14 @@
 
 <main class="card-container">
 
+    <!-- Header -->
     <header class="header">
 
         <div class="logo-wrapper">
+
             <img
                 src="logo.jpg"
-                alt="لوگو کفپوش برتر رسام"
+                alt="کفپوش برتر رسام"
                 class="logo-img"
                 onerror="this.style.display='none';document.getElementById('logoFallback').style.display='flex';"
             >
@@ -321,13 +314,8 @@
             <div id="logoFallback" class="logo-fallback" style="display:none;">
                 KBR
             </div>
+
         </div>
-
-        <h1>کفپوش برتر رسام</h1>
-
-        <p>
-            تولید و اجرای کفپوش‌های اپوکسی و صنعتی
-        </p>
 
     </header>
 
