@@ -1,0 +1,493 @@
+﻿<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>کارت ویزیت دیجیتال | کفپوش برتر رسام</title>
+
+    <meta name="description"
+          content="کارت ویزیت دیجیتال شرکت کفپوش برتر رسام - تولید و اجرای کفپوش‌های اپوکسی و صنعتی">
+
+    <meta name="theme-color" content="#090c5d">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <style>
+        :root {
+            --navy: #090c5d;
+            --blue: #0074aa;
+            --gold: #e3a215;
+            --bg: #f5f7fb;
+            --card-bg: #ffffff;
+            --text-main: #1f2937;
+            --text-muted: #6b7280;
+            --border-color: #e5e7eb;
+            --shadow: 0 12px 30px rgba(9, 12, 93, 0.10);
+            --radius: 18px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Tahoma, "Segoe UI", sans-serif;
+            background: var(--bg);
+            color: var(--text-main);
+            min-height: 100vh;
+            padding: 16px;
+            line-height: 1.6;
+        }
+
+        .card-container {
+            width: 100%;
+            max-width: 440px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+
+        /* Header */
+        .header {
+            background: var(--navy);
+            color: #ffffff;
+            padding: 30px 20px 26px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(
+                90deg,
+                var(--blue),
+                var(--gold)
+            );
+        }
+
+        .logo-wrapper {
+            margin-bottom: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo-img {
+            max-width: 220px;
+            max-height: 120px;
+            width: auto;
+            height: auto;
+            display: block;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .logo-fallback {
+            width: 78px;
+            height: 78px;
+            border: 2px solid var(--gold);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 25px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin: 0 auto;
+        }
+
+        .header h1 {
+            font-size: 1.45rem;
+            font-weight: 800;
+            margin-bottom: 6px;
+        }
+
+        .header p {
+            font-size: 0.88rem;
+            color: #e5e7eb;
+        }
+
+        /* Content */
+        .content {
+            padding: 22px 20px;
+        }
+
+        .section-title {
+            color: var(--navy);
+            font-size: 0.95rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        /* Person */
+        .person-card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 17px;
+            margin-bottom: 13px;
+        }
+
+        .person-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 13px;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .person-name {
+            color: var(--navy);
+            font-size: 1.1rem;
+            font-weight: 800;
+        }
+
+        .person-title {
+            color: var(--blue);
+            background: #eef7fb;
+            padding: 4px 8px;
+            border-radius: 7px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .person-phone {
+            direction: rtl;
+            margin-bottom: 7px;
+            font-size: 0.95rem;
+            font-weight: 700;
+        }
+
+        .person-phone a {
+            color: var(--text-main);
+            text-decoration: none;
+        }
+
+        .phone-label {
+            color: var(--text-muted);
+            font-size: 0.78rem;
+            font-weight: 400;
+            margin-left: 5px;
+        }
+
+        .rubika-badge {
+            display: inline-block;
+            background: #f3f4f6;
+            color: #4b5563;
+            padding: 4px 8px;
+            border-radius: 7px;
+            font-size: 0.74rem;
+            margin-bottom: 14px;
+        }
+
+        /* Buttons */
+        .button-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 9px;
+        }
+
+        .btn {
+            min-height: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            padding: 9px 12px;
+            border-radius: 9px;
+            font-size: 0.83rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: 0.2s ease;
+        }
+
+        .btn-primary {
+            background: var(--navy);
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background: #070a4c;
+        }
+
+        .btn-outline {
+            background: #ffffff;
+            color: var(--navy);
+            border: 1px solid var(--navy);
+        }
+
+        .btn-outline:hover {
+            background: #f1f3ff;
+        }
+
+        /* External actions */
+        .actions-section {
+            display: grid;
+            gap: 10px;
+            margin-top: 18px;
+        }
+
+        .btn-neshan {
+            width: 100%;
+            background: #fff8e8;
+            color: #7d5a00;
+            border: 1px solid #efd58d;
+        }
+
+        .btn-website {
+            width: 100%;
+            background: var(--blue);
+            color: #ffffff;
+        }
+
+        .neshan-dot {
+            width: 10px;
+            height: 10px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background: #f9fafb;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.72rem;
+        }
+
+        .footer strong {
+            color: var(--navy);
+        }
+
+        svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 380px) {
+            .content {
+                padding: 18px 15px;
+            }
+
+            .person-header {
+                flex-direction: column;
+            }
+
+            .button-group {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<main class="card-container">
+
+    <header class="header">
+
+        <div class="logo-wrapper">
+            <img
+                src="logo.jpg"
+                alt="لوگو کفپوش برتر رسام"
+                class="logo-img"
+                onerror="this.style.display='none';document.getElementById('logoFallback').style.display='flex';"
+            >
+
+            <div id="logoFallback" class="logo-fallback" style="display:none;">
+                KBR
+            </div>
+        </div>
+
+        <h1>کفپوش برتر رسام</h1>
+
+        <p>
+            تولید و اجرای کفپوش‌های اپوکسی و صنعتی
+        </p>
+
+    </header>
+
+
+    <div class="content">
+
+        <div class="section-title">
+            ارتباط با کارشناسان
+        </div>
+
+
+        <!-- مقدمی -->
+
+        <section class="person-card">
+
+            <div class="person-header">
+
+                <h2 class="person-name">
+                    مقدمی
+                </h2>
+
+                <span class="person-title">
+                    مدیر بازرگانی
+                </span>
+
+            </div>
+
+
+            <div class="person-phone">
+
+                <span class="phone-label">
+                    موبایل:
+                </span>
+
+                <a href="tel:+989364065718">
+                    ۰۹۳۶۴۰۶۵۷۱۸
+                </a>
+
+            </div>
+
+
+            <div class="rubika-badge">
+                روبیکا: ۰۹۳۶۴۰۶۵۷۱۸
+            </div>
+
+
+            <div class="button-group">
+
+                <a
+                    href="tel:+989364065718"
+                    class="btn btn-primary"
+                >
+                    ☎ تماس
+                </a>
+
+                <a
+                    href="contacts/moghaddami.vcf"
+                    download
+                    class="btn btn-outline"
+                >
+                    ⇩ ذخیره مخاطب
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- شهدی -->
+
+        <section class="person-card">
+
+            <div class="person-header">
+
+                <h2 class="person-name">
+                    شهدی
+                </h2>
+
+                <span class="person-title">
+                    کارشناس فروش و امور اداری
+                </span>
+
+            </div>
+
+
+            <div class="person-phone">
+
+                <span class="phone-label">
+                    موبایل:
+                </span>
+
+                <a href="tel:+989037585146">
+                    ۰۹۰۳۷۵۸۵۱۴۶
+                </a>
+
+            </div>
+
+
+            <div class="rubika-badge">
+                روبیکا: ۰۹۰۳۷۵۸۵۱۴۶
+            </div>
+
+
+            <div class="button-group">
+
+                <a
+                    href="tel:+989037585146"
+                    class="btn btn-primary"
+                >
+                    ☎ تماس
+                </a>
+
+                <a
+                    href="contacts/shahdi.vcf"
+                    download
+                    class="btn btn-outline"
+                >
+                    ⇩ ذخیره مخاطب
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- Links -->
+
+        <div class="actions-section">
+
+            <a
+                href="https://neshan.org/maps/places/sbvEYfPxB9NE"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-neshan"
+            >
+                <span class="neshan-dot"></span>
+                مشاهده موقعیت در نشان
+            </a>
+
+
+            <a
+                href="https://kafpooshbartar.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-website"
+            >
+                🌐 ورود به سایت شرکت
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <footer class="footer">
+        <strong>کفپوش برتر رسام</strong>
+        — کارت ویزیت دیجیتال
+    </footer>
+
+</main>
+
+</body>
+</html>
